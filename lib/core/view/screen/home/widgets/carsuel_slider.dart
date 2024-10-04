@@ -1,6 +1,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:taskappsui/core/view/utility/image_path.dart';
 
 
 import '../../../utility/app_color.dart';
@@ -40,7 +41,7 @@ class _CaruelSliderState extends State<CaruelSlider> {
                       color:TColor.greyColor,
                     ),
 
-                    child:Image.asset("assets/image/banner.png")
+                    child:Image.asset(ImagePath.slider),
                 );
               },
             );

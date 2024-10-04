@@ -21,7 +21,7 @@ class GroceriesResuble extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           children: [
-            Image.asset(ImagePath.chaldal,height: 70,width: 70),
+            Image.asset(ImagePath.plus,height: 70,width: 70),
             SizedBox(width: 15,),
             Text("Pulses",style: TextStyle(
               fontWeight: FontWeight.w600,

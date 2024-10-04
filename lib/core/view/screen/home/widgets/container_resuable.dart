@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../utility/image_path.dart';
+import '../../../utility/t_text_style.dart';
 
 
 class ContainerResuable extends StatelessWidget {
@@ -40,11 +41,11 @@ class ContainerResuable extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(child: Image.asset(ImagePath.apply,height:62,width: 104,)),
+            Center(child: Image.asset(ImagePath.kola,height:62,width: 104,)),
             SizedBox(height: 17,),
-           // Text("Red Apple",style: TTextStyle.boldText),
+            Text("Red Apple",style: TTextStyle.boldText),
 
-           // Text("1kg, Priceg",style: TTextStyle.smallText),
+            Text("1kg, Priceg",style: TTextStyle.smallText),
             SizedBox(height: 17,),
             //Spacer(),
             Row(
