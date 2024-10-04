@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
 
                     ],
                   ),
-                  sizedBoxH(12),
+                  sizedBoxH(16),
 
 
 
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                       return SizedBox(width: 10,);
                     },),
                   ),
-                  SizedBox(height: 15,),
+                  SizedBox(height: 16,),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
 
                     ],
                   ),
-                  sizedBoxH(12),
+                  sizedBoxH(16),
 
 
 
@@ -307,7 +307,7 @@ class _HomePageState extends State<HomePage> {
 
 
 
-                  SizedBox(height: 15,),
+                  SizedBox(height: 16,),
                   SizedBox(
                     height: 250,
                     child: ListView.separated(
