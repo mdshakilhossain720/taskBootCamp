@@ -304,6 +304,23 @@ class TTextStyle{
 
   );
 
+  static TextStyle sig= TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 26,
+    fontFamily:'Gilroy',
+  );static TextStyle social=TextStyle(
+    fontSize: 14,
+    fontFamily:'Gilroy',
+    fontWeight: FontWeight.w600,
+    color: Color(0xff828282),
+  );static TextStyle google=TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xffFCFCFC),
+    fontFamily:'Gilroy',
+
+  );
+
 
 
 

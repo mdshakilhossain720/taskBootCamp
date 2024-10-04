@@ -14,7 +14,7 @@ class GroceriesResuble extends StatelessWidget {
       height: 105,
       width: 248,
       decoration: BoxDecoration(
-        color: Color(0xffF8A44C).withOpacity(0.15),
+        color: const Color(0xffF8A44C).withOpacity(0.15),
         borderRadius: BorderRadius.circular(18),
       ),
       child: Padding(
@@ -22,8 +22,8 @@ class GroceriesResuble extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(ImagePath.plus,height: 70,width: 70),
-            SizedBox(width: 15,),
-            Text("Pulses",style: TextStyle(
+            const SizedBox(width: 15,),
+            const Text("Pulses",style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 20,
             ),)

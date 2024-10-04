@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../utility/app_color.dart';
 import '../../utility/image_path.dart';
-import '../BottomNavBar/bottom_nav_bar.dart';
+
 import '../sign_in/sign_in.dart';
 
 
@@ -20,9 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
             () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) =>SignIn ()))
+            MaterialPageRoute(builder: (context) =>const SignIn ()))
 
     );
   }

@@ -13,7 +13,7 @@ import '../home/home_page.dart';
 
 
 class BottomNavBar extends StatefulWidget {
-  BottomNavBar({super.key});
+ const BottomNavBar({super.key});
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
@@ -26,8 +26,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   // List of screen widgets
   List<Widget> screen = [
-    HomePage(),
-    ExpolerSearch(),
+    const HomePage(),
+    const ExpolerSearchPage(),
     Container(
       color: Colors.red,
     ),
@@ -55,7 +55,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: GetBuilder<BottomNavBarController>(
         builder: (_) {
           return BottomNavigationBar(
-            backgroundColor: Color(0xffFFFFFF),
+            backgroundColor: const Color(0xffFFFFFF),
             elevation: 3,
             type: BottomNavigationBarType.fixed,
             currentIndex: bottomNavBarController.selectIndex,

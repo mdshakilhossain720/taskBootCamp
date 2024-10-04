@@ -19,6 +19,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List <HomeModel>home=[
+    HomeModel(image:ImagePath.kola, title: 'Organic Bananas', subtitle: '7pcs, Priceg', prices: '\$4.99'),
+    HomeModel(image:ImagePath.ap, title: 'Red Apple', subtitle: '1kg, Priceg', prices: '\$4.99'),
+  ];
+
+  List < LastSliderModel>item=[
+    LastSliderModel(image:ImagePath.mo, title: 'Beef Bone', subtitle: '1kg, Priceg', prices: '\$4.99'),
+    LastSliderModel(image:ImagePath.murgi, title: 'Broiler Chicken', subtitle: '1kg, Priceg', prices: '\$4.99'),
+  ];
+
+  List <GroicesModel>grocies=[
+    GroicesModel(image:ImagePath.tomato, title: 'Beef Bone', subtitle: '1kg, Priceg', prices: '\$4.99'),
+    GroicesModel(image:ImagePath.ruti, title: 'Broiler Chicken', subtitle: '1kg, Priceg', prices: '\$4.99'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,7 +100,110 @@ class _HomePageState extends State<HomePage> {
                     height: 250,
                     child: ListView.separated(
 
-                      itemCount: 10,
+                      itemCount: home.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+
+                      itemBuilder: (context,index){
+                        return InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetails()));
+                          },
+                          child: Container(
+                            height: 248,
+                            width: 172,
+
+                            decoration: BoxDecoration(
+
+                              color: Colors.white, // Background color
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey.withOpacity(0.5), // Border color
+                                width: 1,           // Border width
+                              ),
+
+
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.10),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 0), // Shadow position
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12,vertical:30),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                //mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Center(child: Image.asset(home[index].image ?? '',height:62,width: 104,)),
+                                  SizedBox(height: 17,),
+                                  Text(home[index].title ?? '',style: TTextStyle.boldText),
+
+                                  Text(home[index].subtitle ?? '',style: TTextStyle.smallText),
+                                  SizedBox(height: 17,),
+                                  //Spacer(),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(home[index].prices ?? '',style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 0.1,
+                                      ),),
+                                      Container(
+                                        height: 45,
+                                        width: 45,
+                                        decoration: BoxDecoration(
+                                          color: Color(0xff53B175),
+                                          borderRadius: BorderRadius.circular(17),
+                                        ),
+                                        child: Icon(Icons.add,color: Colors.white,),
+                                      )
+
+
+                                    ],
+                                  )
+
+
+                                ],
+                              ),
+                            ),
+
+                          ),
+                        );
+
+
+                        // return InkWell(
+                        //     onTap: (){
+                        //       Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetails()));
+                        //     },
+                        //     child: ContainerResuable());
+
+                      }, separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(width: 10,);
+                    },),
+                  ),
+                  SizedBox(height: 15,),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Best Selling",style: TTextStyle.rowTitle),
+                      Text("See all",style: TTextStyle.rowTitleColor),
+
+                    ],
+                  ),
+                  sizedBoxH(12),
+
+
+
+                  SizedBox(
+                    height: 250,
+                    child: ListView.separated(
+                      itemCount: grocies.length,
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
 
@@ -119,17 +237,17 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               //mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Center(child: Image.asset(ImagePath.kola,height:62,width: 104,)),
+                                Center(child: Image.asset(grocies[index].image ?? '',height:62,width: 104,)),
                                 SizedBox(height: 17,),
-                                Text("Red Apple",style: TTextStyle.boldText),
+                                Text(grocies[index].title ?? '',style: TTextStyle.boldText),
 
-                                Text("1kg, Priceg",style: TTextStyle.smallText),
+                                Text(grocies[index].subtitle ?? '',style: TTextStyle.smallText),
                                 SizedBox(height: 17,),
                                 //Spacer(),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("\$4.99",style: TextStyle(
+                                    Text(grocies[index].prices ?? '',style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w600,
                                       letterSpacing: 0.1,
@@ -155,41 +273,6 @@ class _HomePageState extends State<HomePage> {
 
                         );
 
-
-                        // return InkWell(
-                        //     onTap: (){
-                        //       Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetails()));
-                        //     },
-                        //     child: ContainerResuable());
-
-                      }, separatorBuilder: (BuildContext context, int index) {
-                      return SizedBox(width: 10,);
-                    },),
-                  ),
-                  SizedBox(height: 15,),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Best Selling",style: TTextStyle.rowTitle),
-                      Text("See all",style: TTextStyle.rowTitleColor),
-
-                    ],
-                  ),
-                  sizedBoxH(12),
-
-
-
-                  SizedBox(
-                    height: 250,
-                    child: ListView.separated(
-                      itemCount: 10,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-
-                      itemBuilder: (context,index){
-                        return ContainerResuable();
-
                       }, separatorBuilder: (BuildContext context, int index) {
                       return SizedBox(width: 10,);
                     },),
@@ -203,6 +286,8 @@ class _HomePageState extends State<HomePage> {
 
                     ],
                   ),
+
+
                   sizedBoxH(12),
                   SizedBox(
                     height: 105,
@@ -219,16 +304,82 @@ class _HomePageState extends State<HomePage> {
                     },),
                   ),
 
+
+
+
                   SizedBox(height: 15,),
                   SizedBox(
                     height: 250,
                     child: ListView.separated(
-                      itemCount: 10,
+                      itemCount: item.length,
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
 
                       itemBuilder: (context,index){
-                        return ContainerResuable();
+                        return Container(
+                          height: 248,
+                          width: 172,
+
+                          decoration: BoxDecoration(
+
+                            color: Colors.white, // Background color
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              color: Colors.grey.withOpacity(0.5), // Border color
+                              width: 1,           // Border width
+                            ),
+
+
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.10),
+                                spreadRadius: 2,
+                                blurRadius: 2,
+                                offset: Offset(0, 0), // Shadow position
+                              ),
+                            ],
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 12,vertical:30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              //mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(child: Image.asset(item[index].image ?? '',height:62,width: 104,)),
+                                SizedBox(height: 17,),
+                                Text(item[index].title ?? '',style: TTextStyle.boldText),
+
+                                Text(item[index].subtitle ?? '',style: TTextStyle.smallText),
+                                SizedBox(height: 17,),
+                                //Spacer(),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(item[index].prices ?? '',style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 0.1,
+                                    ),),
+                                    Container(
+                                      height: 45,
+                                      width: 45,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xff53B175),
+                                        borderRadius: BorderRadius.circular(17),
+                                      ),
+                                      child: Icon(Icons.add,color: Colors.white,),
+                                    )
+
+
+                                  ],
+                                )
+
+
+                              ],
+                            ),
+                          ),
+
+                        );
 
                       }, separatorBuilder: (BuildContext context, int index) {
                       return SizedBox(width: 10,);
@@ -251,4 +402,38 @@ class _HomePageState extends State<HomePage> {
 
     );
   }
+}
+
+class HomeModel{
+
+  final String? image;
+  final String? title;
+  final String? subtitle;
+  final String? prices;
+  HomeModel( { required this.image,required this.title,required this.subtitle,required this.prices,});
+
+
+}
+
+
+class LastSliderModel{
+
+  final String? image;
+  final String? title;
+  final String? subtitle;
+  final String? prices;
+  LastSliderModel( { required this.image,required this.title,required this.subtitle,required this.prices,});
+
+
+}
+
+class GroicesModel{
+
+  final String? image;
+  final String? title;
+  final String? subtitle;
+  final String? prices;
+  GroicesModel( { required this.image,required this.title,required this.subtitle,required this.prices,});
+
+
 }

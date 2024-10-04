@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:taskappsui/core/componement/size_box.dart';
 
 import '../../utility/image_path.dart';
 import '../../utility/t_text_style.dart';
@@ -25,7 +26,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               Container(
                 width: double.infinity,
                 height: 371,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color(0xffF2F3F2),
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(25),
@@ -40,7 +41,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                         children: [
                           IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.arrow_back_ios)),
+                              icon: const Icon(Icons.arrow_back_ios)),
                           IconButton(
                               onPressed: () {},
                               icon: Image.asset(ImagePath.logout))
@@ -77,9 +78,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                       "1kg, Price",
                       style:TTextStyle.productDetaiPrices,
                     ),
-                    SizedBox(height: 24,),
+                    const SizedBox(height: 24,),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.start,
+                      // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           alignment: Alignment.center,
@@ -88,14 +90,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                           decoration: BoxDecoration(
 
                             border: Border.all(
-                              color: Color(0xffF0F0F0),
+                              color: const Color(0xffF0F0F0),
                             ),
                             borderRadius: BorderRadius.circular(17),
                           ),
-                          child: Center(child: Icon(Icons.minimize,color: Color(0xffB3B3B3),size: 30,)),
+                          child: Image.asset(ImagePath.mini),
                         ),
-                        SizedBox(width: 9,),
-                        Text("1",style: TTextStyle. cartOne),SizedBox(width: 10,),
+                        const SizedBox(width: 9,),
+                        Text("1",style: TTextStyle. cartOne),const SizedBox(width: 10,),
                         Container(
                           alignment: Alignment.center,
                           height: 45,
@@ -103,24 +105,24 @@ class _ProductDetailsState extends State<ProductDetails> {
                           decoration: BoxDecoration(
 
                             border: Border.all(
-                              color: Color(0xffF0F0F0),
+                              color: const Color(0xffF0F0F0),
                             ),
                             borderRadius: BorderRadius.circular(17),
                           ),
-                          child: Icon(Icons.add,color: Color(0xff53B175),size: 30,),
+                          child: const Icon(Icons.add,color: Color(0xff53B175),size: 30,),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           "\$4.99",
                           style: TTextStyle.Prices,
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Divider(),
-                    SizedBox(
+                    const Divider(),
+                    const SizedBox(
                       height: 18,
                     ),
                     Column(
@@ -135,7 +137,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             Image.asset(ImagePath.arrow),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 6,
                         ),
                         Text(
@@ -144,11 +146,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    Divider(),
-                    SizedBox(
+                    const Divider(),
+                    const SizedBox(
                       height: 9,
                     ),
                     Row(
@@ -160,13 +162,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                         ),
                         Wrap(
                           alignment: WrapAlignment.center,
+                          crossAxisAlignment: WrapCrossAlignment.center,
 
                           children: [
                             Container(
                               height: 18,
                               width: 33,
                               decoration: BoxDecoration(
-                                color: Color(0xffEBEBEB),
+                                color: const Color(0xffEBEBEB),
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: Center(
@@ -178,7 +181,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             ),
                             IconButton(
                                 onPressed: () {},
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.black,
                                   size: 14,
@@ -187,9 +190,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                         )
                       ],
                     ),
-                    SizedBox(height: 9,),
-                    Divider(),
-                    SizedBox(height: 12,),
+                    const SizedBox(height: 9,),
+                    const Divider(),
+                    const SizedBox(height: 12,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -199,16 +202,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                         ),
                         Wrap(
                           alignment: WrapAlignment.center,
+                          crossAxisAlignment: WrapCrossAlignment.center,
 
                           children: [
-                            Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
-                            Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
-                            Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
-                            Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
-                            Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
+                            const Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
+                            const Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
+                            const Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
+                            const Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
+                            const Icon(Icons.star,color: Color(0xffF3603F),size: 14,),
                             IconButton(
                                 onPressed: () {},
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.black,
                                   size: 14,
@@ -217,12 +221,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                         )
                       ],
                     ),
+                    sizedBoxH(16),
                     Container(
                       alignment: Alignment.center,
                       height: 67,
                       width: 364,
                       decoration: BoxDecoration(
-                        color: Color(0xff53B175),
+                        color: const Color(0xff53B175),
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text("Add To Basket",style:TTextStyle.basket),

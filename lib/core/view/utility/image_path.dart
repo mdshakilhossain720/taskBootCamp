@@ -22,6 +22,25 @@ class ImagePath{
   static String ba ='assets/image/ba.png';
   static String red ='assets/icon/red.png';
 
+  // searchexpoler
+  static String egg1 ='assets/images/eg.png';
+  static String egg2 ='assets/images/egg.png';
+  static String hii ='assets/images/hi.png';
+  static String eggNoddle ='assets/images/eggnodle.png';
+  static String chips ='assets/images/chips.png';
+  static String boim ='assets/images/boim.png';
+  static String sear ='assets/images/sea.png';
+  static String ap ='assets/images/ap.png';
+  static String murgi ='assets/images/mod.png';
+  static String mo ='assets/images/mo.png';
+  static String mini ='assets/icon/mini.png';
+
+  static String tomato ='assets/images/tomato.png';
+  static String ruti ='assets/images/ruti.png';
+
+
+
+
 
 
 

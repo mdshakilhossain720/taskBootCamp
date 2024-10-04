@@ -31,7 +31,7 @@ class ContainerResuable extends StatelessWidget {
             color: Colors.grey.withOpacity(0.10),
             spreadRadius: 2,
             blurRadius: 2,
-            offset: Offset(0, 0), // Shadow position
+            offset: const Offset(0, 0), // Shadow position
           ),
         ],
       ),
@@ -42,16 +42,16 @@ class ContainerResuable extends StatelessWidget {
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(child: Image.asset(ImagePath.kola,height:62,width: 104,)),
-            SizedBox(height: 17,),
+            const SizedBox(height: 17,),
             Text("Red Apple",style: TTextStyle.boldText),
 
             Text("1kg, Priceg",style: TTextStyle.smallText),
-            SizedBox(height: 17,),
+            const SizedBox(height: 17,),
             //Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("\$4.99",style: TextStyle(
+                const Text("\$4.99",style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.1,
@@ -60,10 +60,10 @@ class ContainerResuable extends StatelessWidget {
                   height: 45,
                   width: 45,
                   decoration: BoxDecoration(
-                    color: Color(0xff53B175),
+                    color: const Color(0xff53B175),
                     borderRadius: BorderRadius.circular(17),
                   ),
-                  child: Icon(Icons.add,color: Colors.white,),
+                  child: const Icon(Icons.add,color: Colors.white,),
                 )
 
 

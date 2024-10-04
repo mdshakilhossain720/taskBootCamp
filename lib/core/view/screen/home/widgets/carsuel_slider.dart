@@ -34,9 +34,9 @@ class _CaruelSliderState extends State<CaruelSlider> {
                 return Container(
                     alignment: Alignment.center,
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
 
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
 
                       color:TColor.greyColor,
                     ),
@@ -47,7 +47,7 @@ class _CaruelSliderState extends State<CaruelSlider> {
             );
           }).toList(),
         ),
-        SizedBox(height: 4,),
+        const SizedBox(height: 4,),
         Positioned(
             bottom: 10,
             left: 110,
@@ -61,7 +61,7 @@ class _CaruelSliderState extends State<CaruelSlider> {
                       Container(
                         height:10,
                         width:10,
-                        margin: EdgeInsets.symmetric(horizontal: 2),
+                        margin: const EdgeInsets.symmetric(horizontal: 2),
                         decoration: BoxDecoration(
                           color: i == currentPage ? TColor.splashColor :null,
                           border: Border.all(color: Colors.grey,width: 1),
