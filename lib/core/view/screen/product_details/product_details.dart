@@ -58,6 +58,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   ],
                 ),
               ),
+              sizedBoxH(12),
               Padding(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 15, vertical: 10),

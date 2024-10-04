@@ -113,41 +113,44 @@ class _ExpolerSearchPageState extends State<ExpolerSearchPage> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 12,vertical:30),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            //mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Center(child: Image.asset(items[index].image ?? '',height:62,width: 104,)),
-                              const SizedBox(height: 17,),
-                              Text(items[index].title ?? '',style: TTextStyle.boldText),
-
-                              Text(items[index].subtitle ?? '',style: TTextStyle.smallText),
-                              const SizedBox(height: 17,),
-                              //Spacer(),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(items[index].prices ?? '',style: const TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 0.1,
-                                  ),),
-                                  Container(
-                                    height: 45,
-                                    width: 45,
-                                    decoration: BoxDecoration(
-                                      color: const Color(0xff53B175),
-                                      borderRadius: BorderRadius.circular(17),
-                                    ),
-                                    child: const Icon(Icons.add,color: Colors.white,),
-                                  )
-
-
-                                ],
-                              )
-
-
-                            ],
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(child: Image.asset(items[index].image ?? '',height:62,width: 104,)),
+                                const SizedBox(height: 17,),
+                                Text(items[index].title ?? '',style: TTextStyle.boldText),
+                            
+                                Text(items[index].subtitle ?? '',style: TTextStyle.smallText),
+                                const SizedBox(height: 17,),
+                                //Spacer(),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(items[index].prices ?? '',style: const TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 0.1,
+                                    ),),
+                                    Container(
+                                      height: 45,
+                                      width: 45,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xff53B175),
+                                        borderRadius: BorderRadius.circular(17),
+                                      ),
+                                      child: const Icon(Icons.add,color: Colors.white,),
+                                    )
+                            
+                            
+                                  ],
+                                )
+                            
+                            
+                              ],
+                            ),
                           ),
                         ),
 
