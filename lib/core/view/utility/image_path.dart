@@ -8,7 +8,7 @@ class ImagePath{
   static String home='assets/icon/home.png';
   static String signIn='assets/images/mask.png';
   static String flag='assets/images/fff.png';
-  static String google='assets/icon/google.png';
+  static String google='assets/images/goog.png';
   static String fb='assets/icon/fb.png';
   static String exclue='assets/images/Exclude.png';
   static String nav='assets/icon/red.png';
